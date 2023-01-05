@@ -48,7 +48,16 @@ def ask_exclusions():
     return excluded_input_list
 
 
-def build_string(sites_list, search_input_list, excluded_items_list):
+def ask_locations():
+    print('What locations would you like to search for jobs? *USE COMMAS TO SEPERATE*: EX: CA,California,FL,Florida,Remote')
+    location_input = input()
+    # print(site_input)
+    locations_List = location_input.split(',')
+    print('searching locations for:   ', locations_List)
+    return locations_List
+
+
+def build_string(sites_list, search_input_list, search_locations_list, excluded_input_list):
     string_list = []
     if sites_list is not None:
         for site in sites_list:
@@ -63,9 +72,17 @@ def build_string(sites_list, search_input_list, excluded_items_list):
             string_list.append(f'"{search}"')
             string_list.append(' OR ')
         string_list.pop()
-    if excluded_items_list is not None:
+
+    if search is not None:
         string_list.append(' ')
-        for item in excluded_items_list:
+        for location in search_locations_list:
+            string_list.append(f'"{location}"')
+            string_list.append(' OR ')
+        string_list.pop()
+
+    if excluded_input_list is not None:
+        string_list.append(' ')
+        for item in excluded_input_list:
             string_list.append(f"-{item}")
             string_list.append(' ')
         string_list.pop()
@@ -88,6 +105,13 @@ def buildQuery():
         search_input_list = askSearchItems()
     if q2 == 'n':
         search_input_list = None
+    print('Would you like to specify any specific locations? y/n: ')
+    q4 = input()
+    q4.lower()
+    if q4 == 'y':
+        search_locations_list = ask_locations()
+    if q4 == 'n':
+        search_locations_list = None
     print('Would you like to exclude any specific terms? y/n:')
     q3 = input()
     q3.lower()
@@ -99,7 +123,7 @@ def buildQuery():
         print('No input entered!')
         return None
     print('Here is your search string!   ', build_string(
-        sites_list, search_input_list, excluded_input_list))
+        sites_list, search_input_list, search_locations_list, excluded_input_list))
     return None
 
 
