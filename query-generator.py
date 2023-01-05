@@ -23,7 +23,8 @@ ex: site:google.com OR site:.gov OR site:Linkedin.com
 
 
 def askSites():
-    print('What sites would you like to search for jobs? *USE COMMAS TO SEPERATE*: EX google.com,linkedin.com:   ')
+    print('What sites would you like to search for jobs? *USE COMMAS TO SEPERATE*: EX linkedin.com,googe.com:   ')
+    print('Here are some popular job boards you might try to search for: glassdoor.com, angelist.co, linkedin.com, greenhouse.io, app.dover.io, lever.co, jobs.ashbyhq.com')
     site_input = input()
     # print(site_input)
     sites_List = site_input.split(',')
