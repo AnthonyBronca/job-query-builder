@@ -41,7 +41,7 @@ function App() {
   let locationExample = 'Example: CA,California,Los Angeles,Remote';
   let omittedExample = 'Example: sr.,senior,java,jinja'
 
-
+  //comment for deploy
   return (
     <>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
