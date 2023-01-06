@@ -24,18 +24,20 @@ function App() {
     };
 
     let res = buildQuery(form);
-    setBoolean(res)
+    setBoolean(res);
+    window.scrollTo(0, 0)
   }
 
   const handleCopy = async (e) => {
     e.preventDefault();
     navigator.clipboard.writeText(boolean);
     setCopied(true)
-    setTimeout(() => setCopied(false), 3000)
+    setTimeout(() => setCopied(false), 3000);
+
   }
 
-  let siteSuggestions = 'Easy copy and paste  -> glassdoor.com,angelist.co,linkedin.com,greenhouse.io,app.dover.io,lever.co,jobs.ashbyhq.com'
-  let keyWordSuggestions = 'Easy copy and paste  ->    javascript,python,react,front end developer,front-end developer,back end devloper,back-end devloper,full stack developer'
+  let siteSuggestions = 'Example: greenhouse.io,app.dover.io,lever.co,jobs.ashbyhq.com'
+  let keyWordSuggestions = 'Example: javascript,python,react,front end developer,front-end developer,back end developer,back-end developer,full stack developer'
   let locationExample = 'Example: CA,California,Los Angles,Remote';
   let omittedExample = 'Example: sr.,senior,java,jinja'
 
