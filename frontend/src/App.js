@@ -38,7 +38,7 @@ function App() {
 
   let siteSuggestions = 'Example: greenhouse.io,app.dover.io,lever.co,jobs.ashbyhq.com'
   let keyWordSuggestions = 'Example: javascript,python,react,front end developer,front-end developer,back end developer,back-end developer,full stack developer'
-  let locationExample = 'Example: CA,California,Los Angles,Remote';
+  let locationExample = 'Example: CA,California,Los Angeles,Remote';
   let omittedExample = 'Example: sr.,senior,java,jinja'
 
 
