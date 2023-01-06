@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jobquerybuilder.github.io/static/css/main.e6c13ad2.css",
-    "main.js": "/jobquerybuilder.github.io/static/js/main.fb1dccf8.js",
-    "static/js/787.cda612ba.chunk.js": "/jobquerybuilder.github.io/static/js/787.cda612ba.chunk.js",
-    "index.html": "/jobquerybuilder.github.io/index.html",
-    "main.e6c13ad2.css.map": "/jobquerybuilder.github.io/static/css/main.e6c13ad2.css.map",
-    "main.fb1dccf8.js.map": "/jobquerybuilder.github.io/static/js/main.fb1dccf8.js.map",
-    "787.cda612ba.chunk.js.map": "/jobquerybuilder.github.io/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/job-query-builder/static/css/main.e6c13ad2.css",
+    "main.js": "/job-query-builder/static/js/main.d92b4bb1.js",
+    "static/js/787.cda612ba.chunk.js": "/job-query-builder/static/js/787.cda612ba.chunk.js",
+    "index.html": "/job-query-builder/index.html",
+    "main.e6c13ad2.css.map": "/job-query-builder/static/css/main.e6c13ad2.css.map",
+    "main.d92b4bb1.js.map": "/job-query-builder/static/js/main.d92b4bb1.js.map",
+    "787.cda612ba.chunk.js.map": "/job-query-builder/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.fb1dccf8.js"
+    "static/js/main.d92b4bb1.js"
   ]
 }
