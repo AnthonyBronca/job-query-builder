@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import buildQuery from './helpers/query-builder';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClipboard } from '@fortawesome/free-solid-svg-icons'
+import { faClipboard, faSquareCheck } from '@fortawesome/free-solid-svg-icons'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   const [locations, setLocations] = useState('');
   const [omit, setOmit] = useState('');
   const [boolean, setBoolean] = useState('');
-
+  const [copied, setCopied] = useState(false)
 
 
 
@@ -25,6 +25,13 @@ function App() {
 
     let res = buildQuery(form);
     setBoolean(res)
+  }
+
+  const handleCopy = async (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(boolean);
+    setCopied(true)
+    setTimeout(() => setCopied(false), 3000)
   }
 
   let siteSuggestions = 'Easy copy and paste  -> glassdoor.com,angelist.co,linkedin.com,greenhouse.io,app.dover.io,lever.co,jobs.ashbyhq.com'
@@ -51,11 +58,11 @@ function App() {
 
             }}>
               <div style={{ display: 'flex', justifyContent: 'flex-end', position: 'relative', zIndex: '999', bottom: '10px' }}>
-                <button
-                  onClick={() => { navigator.clipboard.writeText(boolean) }}
+                {!copied ? <button
+                  onClick={(e) => handleCopy(e)}
                   style={{ backgroundColor: 'white' }}>
                   <FontAwesomeIcon icon={faClipboard} className='user-icon' />
-                </button>
+                </button> : <FontAwesomeIcon icon={faSquareCheck} className='user-icon' />}
               </div>
               <span>{boolean}</span>
             </div>
