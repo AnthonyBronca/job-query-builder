@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import buildQuery from './helpers/query-builder';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboard } from '@fortawesome/free-solid-svg-icons'
+
 
 function App() {
   const [sites, setSites] = useState('');
@@ -47,8 +50,12 @@ function App() {
               padding: '15px'
 
             }}>
-              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <button>hello</button>
+              <div style={{ display: 'flex', justifyContent: 'flex-end', position: 'relative', zIndex: '999', bottom: '10px' }}>
+                <button
+                  onClick={() => { navigator.clipboard.writeText(boolean) }}
+                  style={{ backgroundColor: 'white' }}>
+                  <FontAwesomeIcon icon={faClipboard} className='user-icon' />
+                </button>
               </div>
               <span>{boolean}</span>
             </div>
