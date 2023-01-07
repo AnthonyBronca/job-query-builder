@@ -1,5 +1,7 @@
 This is a query generator for job seekers!
 
+Live Link: https://anthonybronca.github.io/job-query-builder/
+
 Google and Linkedin have specific syntaxes for boolean searches, and this is an easy to have a program build all that syntax for you!
 
 How to use:
